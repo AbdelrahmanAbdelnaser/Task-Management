@@ -1,5 +1,18 @@
 import { useState } from "react";
 
+/**
+ * Edit component responsible for editing an existing task .
+ *
+ * @component
+ * @param {Object} props.task - The task object to be edited
+ * @param {number} props.task.id - Task ID
+ * @param {string} props.task.title - Task title
+ * @param {string} props.task.description - Task description
+ * @param {string} props.task.category - Task category (work | urgent | personal)
+ * @param {Function} props.setTasks - Function to update tasks state in parent component
+ * @returns {JSX.Element}
+ */
+
 function Edit({ task, setTasks }) {
   const [editedTask, setEditedTask] = useState({
     id: task.id,

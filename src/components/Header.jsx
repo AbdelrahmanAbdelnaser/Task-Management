@@ -3,9 +3,20 @@ import { useEffect, useState } from "react";
 function Header({ tasks, setSelectedTask }) {
   const [activeCategory, setActiveCategory] = useState("all");
 
+  /**
+   * Change active task category filter
+   *
+   * @param {string} category - Selected category (all | work | urgent | personal)
+   */
+
   function filterTasks(category) {
     setActiveCategory(category);
   }
+
+  /**
+   * Effect: filters tasks whenever tasks or category changes
+   */
+
   useEffect(() => {
     if (activeCategory === "all") {
       setSelectedTask(tasks);

@@ -1,6 +1,18 @@
 import Delete from "./Delete";
 import Edit from "./Edit";
 
+/**
+ * Tasks component responsible for rendering a list of task cards
+ * with Edit and Delete functionality using Bootstrap modals.
+ *
+ * @component
+ * @param {Object} props
+ * @param {Array<Object>} props.tasks - Array of task objects to display
+ * @param {Function} props.setTasks - Function to update tasks state
+ * @param {Function} props.deleteTask - Function to delete a task by ID
+ * @returns {JSX.Element}
+ */
+
 function Tasks(props) {
   return (
     <>

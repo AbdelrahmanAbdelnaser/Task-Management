@@ -1,13 +1,28 @@
+/**
+ * ================================
+ * Root Variables (Theme Colors)
+ * ================================
+ * Defines global color variables for task categories.
+ */
 :root {
   --work-color: red;
   --urgent-color: #9c27b0;
   --personal-color: #009688;
 }
-/* start header */
+
+/* ------------------------ Header Section ------------------------ */
+
+/**
+ * Active "All" filter button style
+ */
 .all.select {
   background-color: black !important;
   color: white !important;
 }
+
+/**
+ * Work category button styles (hover + selected state)
+ */
 .work:hover,
 .work.select {
   background-color: var(--work-color) !important;
@@ -15,12 +30,19 @@
   color: white !important;
 }
 
+/**
+ * Urgent category button styles (hover + selected state)
+ */
 .urgent:hover,
 .urgent.select {
   background-color: var(--urgent-color) !important;
   border-color: var(--urgent-color) !important;
   color: white !important;
 }
+
+/**
+ * Personal category button styles (hover + selected state)
+ */
 .personal:hover,
 .personal.select {
   background-color: var(--personal-color) !important;
@@ -28,11 +50,15 @@
   color: white !important;
 }
 
-/* end header */
+/* ------------------------ Tasks Section ------------------------ */
+
+/**
+ * Work task indicator bar
+ */
 .card.color1::after {
   content: "";
   background-color: var(--work-color);
-  height: calc(100%);
+  height: 100%;
   width: 3%;
   position: absolute;
   top: 0%;
@@ -41,10 +67,14 @@
   border-bottom-left-radius: 5.5px;
   transition: 0.5s;
 }
+
+/**
+ * Urgent task indicator bar
+ */
 .card.color2::after {
   content: "";
   background-color: var(--urgent-color);
-  height: calc(100%);
+  height: 100%;
   width: 3%;
   position: absolute;
   top: 0%;
@@ -53,10 +83,14 @@
   border-bottom-left-radius: 5.5px;
   transition: 0.5s;
 }
+
+/**
+ * Personal task indicator bar
+ */
 .card.color3::after {
   content: "";
   background-color: var(--personal-color);
-  height: calc(100%);
+  height: 100%;
   width: 3%;
   position: absolute;
   top: 0%;
@@ -65,34 +99,39 @@
   border-bottom-left-radius: 5.5px;
   transition: 0.5s;
 }
+
+/**
+ * Hover state labels for task cards
+ */
+.card.color1:hover::after,
+.card.color2:hover::after,
+.card.color3:hover::after {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 70px;
+}
+
+/* Individual hover labels */
 .card.color1:hover::after {
   content: "Work";
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  width: 70px;
 }
+
 .card.color2:hover::after {
   content: "Urgent";
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  width: 70px;
 }
+
 .card.color3:hover::after {
   content: "Personal";
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  width: 70px;
 }
-/*start popup */
+
+/* ------------------------ Popup Section ------------------------ */
+
+/**
+ * Form inputs styling inside popup modal
+ */
 .popup textarea,
 .popup input,
 .popup select {
@@ -100,12 +139,19 @@
   border: none;
   box-shadow: inset 1px 1px 5px;
 }
+
+/**
+ * Focus state for form controls inside popup
+ */
 .popup textarea:focus,
 .popup input:focus,
 .popup select:focus {
   outline: 2px ridge darkorange;
 }
+
+/**
+ * Select dropdown spacing adjustment
+ */
 .popup select {
   padding: 0.25rem;
 }
-/*end popup */
