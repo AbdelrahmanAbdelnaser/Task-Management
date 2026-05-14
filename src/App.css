@@ -1,0 +1,80 @@
+.card.color1::after {
+  content: "";
+  background-color: red;
+  height: calc(100%);
+  width: 3%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-top-left-radius: 5.5px;
+  border-bottom-left-radius: 5.5px;
+  transition: 0.5s;
+}
+.card.color2::after {
+  content: "";
+  background-color: #9c27b0;
+  height: calc(100%);
+  width: 3%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-top-left-radius: 5.5px;
+  border-bottom-left-radius: 5.5px;
+  transition: 0.5s;
+}
+.card.color3::after {
+  content: "";
+  background-color: #009688;
+  height: calc(100%);
+  width: 3%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-top-left-radius: 5.5px;
+  border-bottom-left-radius: 5.5px;
+  transition: 0.5s;
+}
+.card.color1:hover::after {
+  content: "Work";
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 70px;
+}
+.card.color2:hover::after {
+  content: "Urgent";
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 70px;
+}
+.card.color3:hover::after {
+  content: "Personal";
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 70px;
+}
+/*start popup */
+.popup textarea,
+.popup input,
+.popup select {
+  border-radius: 8px;
+  border: none;
+  box-shadow: inset 1px 1px 5px;
+}
+.popup textarea:focus,
+.popup input:focus,
+.popup select:focus {
+  outline: 2px ridge darkorange;
+}
+.popup select {
+  padding: 0.25rem;
+}
+/*end popup */
