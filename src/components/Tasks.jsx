@@ -8,7 +8,7 @@ function Tasks(props) {
         <div className="row g-1">
           {props.tasks.map((task) => {
             return (
-              <div className="col-md-4" key={task.id}>
+              <div className="col-md-4 flex-fill" key={task.id}>
                 <div
                   className={
                     task.category === "work"

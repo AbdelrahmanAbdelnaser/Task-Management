@@ -1,6 +1,37 @@
+:root {
+  --work-color: red;
+  --urgent-color: #9c27b0;
+  --personal-color: #009688;
+}
+/* start header */
+.all.select {
+  background-color: black !important;
+  color: white !important;
+}
+.work:hover,
+.work.select {
+  background-color: var(--work-color) !important;
+  border-color: var(--work-color) !important;
+  color: white !important;
+}
+
+.urgent:hover,
+.urgent.select {
+  background-color: var(--urgent-color) !important;
+  border-color: var(--urgent-color) !important;
+  color: white !important;
+}
+.personal:hover,
+.personal.select {
+  background-color: var(--personal-color) !important;
+  border-color: var(--personal-color) !important;
+  color: white !important;
+}
+
+/* end header */
 .card.color1::after {
   content: "";
-  background-color: red;
+  background-color: var(--work-color);
   height: calc(100%);
   width: 3%;
   position: absolute;
@@ -12,7 +43,7 @@
 }
 .card.color2::after {
   content: "";
-  background-color: #9c27b0;
+  background-color: var(--urgent-color);
   height: calc(100%);
   width: 3%;
   position: absolute;
@@ -24,7 +55,7 @@
 }
 .card.color3::after {
   content: "";
-  background-color: #009688;
+  background-color: var(--personal-color);
   height: calc(100%);
   width: 3%;
   position: absolute;
