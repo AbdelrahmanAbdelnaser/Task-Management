@@ -5,12 +5,6 @@ function Header({ tasks, setSelectedTask }) {
 
   function filterTasks(category) {
     setActiveCategory(category);
-
-    if (category === "all") {
-      setSelectedTask(tasks);
-    } else {
-      setSelectedTask(tasks.filter((task) => task.category === category));
-    }
   }
   useEffect(() => {
     if (activeCategory === "all") {
